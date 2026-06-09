@@ -44,7 +44,7 @@ for i in range(1, 9):
     with open(path, "rb") as _f:
         co[i] = "data:image/png;base64," + base64.b64encode(_f.read()).decode()
 
-# ── 1f. Load Organisation Hierarchy screenshots (ss1–ss5) ─────────────────────
+# ── 1f. Load Organisation Hierarchy screenshots (ss1–ss5 + Team member ss) ────
 OH_DIR = "/Users/anunaya.choudhary/Windsurf Projects/YMPL guide/Organisation Hierarchy Screenshots"
 
 oh = {}
@@ -52,6 +52,9 @@ for i in range(1, 6):
     path = os.path.join(OH_DIR, f"ss{i}.png")
     with open(path, "rb") as _f:
         oh[i] = "data:image/png;base64," + base64.b64encode(_f.read()).decode()
+
+with open(os.path.join(OH_DIR, "Team member ss.png"), "rb") as _f:
+    oh_tm = "data:image/png;base64," + base64.b64encode(_f.read()).decode()
 
 # ── 1e. Load MF screenshots (Screenshot 1–16) ─────────────────────────────────
 MF_DIR = "/Users/anunaya.choudhary/Windsurf Projects/YMPL guide/MF Screenshots"
@@ -679,10 +682,27 @@ slide34 = screen_slide(
     extra_badge=badge("New members activate via email link","#c4b5fd")
 )
 
+slide_tm = screen_slide(
+    "s34",
+    "linear-gradient(160deg, #3b0764, #7c3aed)",
+    "Module 03 · Team Members",
+    "Add Team Member",
+    "Side panel — fill in details and send an activation link",
+    [
+        "Name, Email address, and Phone number are required fields",
+        "Role: choose from Admin, Relationship Manager, Yubi Markets RM, or Operations Manager",
+        "EUIN field: required if this member will distribute mutual funds",
+        "Organisation Node (optional): assign the member to a node in the hierarchy at creation time",
+        "Click 'Send activation link' — the member receives an email to set their password and activate",
+    ],
+    full_img(oh_tm),
+    extra_badge=badge("Activation email sent instantly on form submit","#c4b5fd")
+)
+
 # ── Module 04: Organisation Hierarchy (s35–s36) ──────────────────────────────
 
 slide35 = cover_slide(
-    "s34",
+    "s35",
     "linear-gradient(135deg, #0f172a, #1e293b, #334155)",
     "Part 04 of 06",
     "Organisation Hierarchy",
@@ -691,7 +711,7 @@ slide35 = cover_slide(
 )
 
 slide36 = screen_slide(
-    "s35",
+    "s36",
     "linear-gradient(160deg, #0f172a, #334155)",
     "Module 04 · Organisation Hierarchy",
     "Hierarchy Tree",
@@ -706,7 +726,7 @@ slide36 = screen_slide(
 )
 
 oh2 = screen_slide(
-    "s36",
+    "s37",
     "linear-gradient(160deg, #0f172a, #334155)",
     "Module 04 · Organisation Hierarchy",
     "Add a Child Node",
@@ -721,7 +741,7 @@ oh2 = screen_slide(
 )
 
 oh3 = screen_slide(
-    "s39",
+    "s40",
     "linear-gradient(160deg, #0f172a, #334155)",
     "Module 04 · Organisation Hierarchy",
     "View Organisation Chart",
@@ -737,7 +757,7 @@ oh3 = screen_slide(
 )
 
 oh4 = screen_slide(
-    "s37",
+    "s38",
     "linear-gradient(160deg, #0f172a, #334155)",
     "Module 04 · Organisation Hierarchy · Team Assignment",
     "Assign Team Members — Empty State",
@@ -752,7 +772,7 @@ oh4 = screen_slide(
 )
 
 oh5 = screen_slide(
-    "s38",
+    "s39",
     "linear-gradient(160deg, #0f172a, #334155)",
     "Module 04 · Organisation Hierarchy · Team Assignment",
     "Assign Team Members — After Assignment",
@@ -770,7 +790,7 @@ oh5 = screen_slide(
 # ── Module 05: Fixed Deposits (s40–s52) ──────────────────────────────────────
 
 fd_cover = cover_slide(
-    "s40",
+    "s41",
     "linear-gradient(135deg, #78350f, #b45309, #d97706)",
     "Part 05 of 06",
     "Fixed Deposits",
@@ -779,7 +799,7 @@ fd_cover = cover_slide(
 )
 
 fd1 = screen_slide(
-    "s41",
+    "s42",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits",
     "FD Marketplace",
@@ -795,7 +815,7 @@ fd1 = screen_slide(
 )
 
 fd2 = screen_slide(
-    "s42",
+    "s43",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Rate Filters",
     "Personalised Interest Rates",
@@ -810,7 +830,7 @@ fd2 = screen_slide(
 )
 
 fd3 = screen_slide(
-    "s43",
+    "s44",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Issuer Detail",
     "Issuer Profile & Returns Calculator",
@@ -826,7 +846,7 @@ fd3 = screen_slide(
 )
 
 fd4 = screen_slide(
-    "s44",
+    "s45",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Payout Options",
     "Choose Payout Frequency",
@@ -842,7 +862,7 @@ fd4 = screen_slide(
 )
 
 fd5 = screen_slide(
-    "s45",
+    "s46",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Tenure Selection",
     "Select Tenure & Rate",
@@ -858,7 +878,7 @@ fd5 = screen_slide(
 )
 
 fd6 = screen_slide(
-    "s46",
+    "s47",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Selection Confirmed",
     "FD Selection Summary",
@@ -873,7 +893,7 @@ fd6 = screen_slide(
 )
 
 fd7 = screen_slide(
-    "s47",
+    "s48",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Investment Summary",
     "Investment Details Confirmed",
@@ -888,7 +908,7 @@ fd7 = screen_slide(
 )
 
 fd8 = screen_slide(
-    "s48",
+    "s49",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Rate Card",
     "Full Rate Card",
@@ -903,7 +923,7 @@ fd8 = screen_slide(
 )
 
 fd9 = screen_slide(
-    "s49",
+    "s50",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Booking",
     "Book FD — Confirm Details",
@@ -918,7 +938,7 @@ fd9 = screen_slide(
 )
 
 fd10 = screen_slide(
-    "s50",
+    "s51",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Booking",
     "Confirm & Send Payment Link",
@@ -934,7 +954,7 @@ fd10 = screen_slide(
 )
 
 fd11 = screen_slide(
-    "s51",
+    "s52",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Booking",
     "Payment Link Sent",
@@ -949,7 +969,7 @@ fd11 = screen_slide(
 )
 
 fd12 = screen_slide(
-    "s52",
+    "s53",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Orders",
     "Orders — Track Applications",
@@ -967,7 +987,7 @@ fd12 = screen_slide(
 # ── Module 06: Mutual Funds (s53–s69) ────────────────────────────────────────
 
 mf_cover = cover_slide(
-    "s53",
+    "s54",
     "linear-gradient(135deg, #083344, #0c4a6e, #0284c7)",
     "Part 06 of 06",
     "Mutual Funds",
@@ -977,7 +997,7 @@ mf_cover = cover_slide(
 
 # ss16: Clients Dashboard with Mutual Fund navigate
 mf1 = screen_slide(
-    "s54",
+    "s55",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds",
     "Clients Dashboard",
@@ -994,7 +1014,7 @@ mf1 = screen_slide(
 
 # ss15: Investor Switcher dropdown
 mf2 = screen_slide(
-    "s55",
+    "s56",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds",
     "Investor Switcher",
@@ -1010,7 +1030,7 @@ mf2 = screen_slide(
 
 # ss1: Explore Mutual Funds — Fund Catalogue
 mf3 = screen_slide(
-    "s56",
+    "s57",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Explore",
     "Fund Catalogue",
@@ -1027,7 +1047,7 @@ mf3 = screen_slide(
 
 # ss10: Fund Fact Sheet (360 ONE BALANCED HYBRID FUND)
 mf4 = screen_slide(
-    "s57",
+    "s58",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Fund Detail",
     "Fund Fact Sheet",
@@ -1044,7 +1064,7 @@ mf4 = screen_slide(
 
 # ss11: Set Up SIP — Step 1 Select Scheme
 mf5 = screen_slide(
-    "s58",
+    "s59",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · SIP Setup · Step 1 of 4",
     "Set Up SIP — Select Scheme",
@@ -1060,7 +1080,7 @@ mf5 = screen_slide(
 
 # ss12: Set Up SIP — Step 2 Configure SIP
 mf6 = screen_slide(
-    "s59",
+    "s60",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · SIP Setup · Step 2 of 4",
     "Configure Your SIP",
@@ -1077,7 +1097,7 @@ mf6 = screen_slide(
 
 # ss13: Place New Order — Step 3 Select Bank
 mf7 = screen_slide(
-    "s60",
+    "s61",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Lumpsum Order · Step 3 of 4",
     "Select Bank Account",
@@ -1093,7 +1113,7 @@ mf7 = screen_slide(
 
 # ss14: Place New Order — Step 4 Review & Confirm
 mf8 = screen_slide(
-    "s61",
+    "s62",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Lumpsum Order · Step 4 of 4",
     "Review &amp; Confirm Order",
@@ -1110,7 +1130,7 @@ mf8 = screen_slide(
 
 # ss3: Portfolio Dashboard
 mf9 = screen_slide(
-    "s62",
+    "s63",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Portfolio",
     "Portfolio Dashboard",
@@ -1127,7 +1147,7 @@ mf9 = screen_slide(
 
 # ss4: Portfolio Holdings
 mf10 = screen_slide(
-    "s63",
+    "s64",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Portfolio · Holdings",
     "Holdings — Per-Scheme Breakdown",
@@ -1144,7 +1164,7 @@ mf10 = screen_slide(
 
 # ss5: Mandates tab
 mf11 = screen_slide(
-    "s64",
+    "s65",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Portfolio · Mandates",
     "Mandates",
@@ -1161,7 +1181,7 @@ mf11 = screen_slide(
 
 # ss6: STP tab — list of 4 STPs
 mf12 = screen_slide(
-    "s65",
+    "s66",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Portfolio · STP",
     "Systematic Transfer Plans (STP)",
@@ -1178,7 +1198,7 @@ mf12 = screen_slide(
 
 # ss7: STP/SIP detail view
 mf13 = screen_slide(
-    "s66",
+    "s67",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · STP / SIP Detail",
     "Plan Detail View",
@@ -1194,7 +1214,7 @@ mf13 = screen_slide(
 
 # ss2: Orders — transaction history
 mf14 = screen_slide(
-    "s67",
+    "s68",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Orders",
     "Orders — Transaction History",
@@ -1211,7 +1231,7 @@ mf14 = screen_slide(
 
 # ss8: Calculators menu
 mf15 = screen_slide(
-    "s68",
+    "s69",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Calculators",
     "MF Calculators",
@@ -1228,7 +1248,7 @@ mf15 = screen_slide(
 
 # ss9: SIP Calculator result
 mf16 = screen_slide(
-    "s69",
+    "s70",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Calculators · SIP",
     "SIP Calculator",
@@ -1268,7 +1288,7 @@ summary_right = f'''<div class="sum-col">
   {summary_bullet("Organisation Hierarchy → Build firm structure → Map partners")}
 </div>'''
 
-slide37 = f'''<div id="s70" class="slide cover" style="background:linear-gradient(135deg, #0f172a, #1e3a5f, #2563eb);">
+slide37 = f'''<div id="s71" class="slide cover" style="background:linear-gradient(135deg, #0f172a, #1e3a5f, #2563eb);">
   <div class="cover-inner">
     <div class="eyebrow">Complete Journey</div>
     <h1>From Sign-Up to Live</h1>
@@ -1285,7 +1305,7 @@ all_slides = [slide2,slide3,slide4,slide5,slide6,slide7,slide8,
               slide9,slide10,slide11,slide12,slide13,slide14,slide15,slide16,
               slide17,slide18,slide19,slide21,slide22,slide23,slide24,
               slide25,slide26,slide27,slide28,slide29,slide30,slide31,slide32,
-              slide33,slide34,slide35,slide36,oh2,oh4,oh5,oh3,
+              slide33,slide34,slide_tm,slide35,slide36,oh2,oh4,oh5,oh3,
               fd_cover,fd1,fd2,fd3,fd4,fd5,fd6,fd7,fd8,fd9,fd10,fd11,fd12,
               mf_cover,mf1,mf2,mf3,mf4,mf5,mf6,mf7,mf8,mf9,mf10,mf11,mf12,mf13,mf14,mf15,mf16,
               slide37]
@@ -1294,7 +1314,7 @@ slides_html = "\n".join(all_slides)
 
 dots_nav = "".join(
     f'<button class="dot" data-idx="{i}" aria-label="Go to slide {i+1}"></button>'
-    for i in range(69)
+    for i in range(70)
 )
 
 html = f'''<!DOCTYPE html>
@@ -1669,14 +1689,14 @@ body{{
     <button class="nav-btn" id="prev-btn" disabled>&#8592; Prev</button>
     <div id="dots">{dots_nav}</div>
     <button class="nav-btn" id="next-btn">Next &#8594;</button>
-    <span id="slide-counter">1 / 69</span>
+    <span id="slide-counter">1 / 70</span>
   </div>
 
 </div>
 
 <script>
 (function(){{
-  const total = 69;
+  const total = 70;
   let cur = 0;
 
   const slides  = Array.from({{length:total}},(_,i)=>document.getElementById('s'+(i+2)));
