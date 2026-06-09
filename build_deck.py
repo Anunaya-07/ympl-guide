@@ -721,7 +721,7 @@ oh2 = screen_slide(
 )
 
 oh3 = screen_slide(
-    "s37",
+    "s39",
     "linear-gradient(160deg, #0f172a, #334155)",
     "Module 04 · Organisation Hierarchy",
     "View Organisation Chart",
@@ -737,7 +737,7 @@ oh3 = screen_slide(
 )
 
 oh4 = screen_slide(
-    "s38",
+    "s37",
     "linear-gradient(160deg, #0f172a, #334155)",
     "Module 04 · Organisation Hierarchy · Team Assignment",
     "Assign Team Members — Empty State",
@@ -752,7 +752,7 @@ oh4 = screen_slide(
 )
 
 oh5 = screen_slide(
-    "s39",
+    "s38",
     "linear-gradient(160deg, #0f172a, #334155)",
     "Module 04 · Organisation Hierarchy · Team Assignment",
     "Assign Team Members — After Assignment",
@@ -1285,7 +1285,7 @@ all_slides = [slide2,slide3,slide4,slide5,slide6,slide7,slide8,
               slide9,slide10,slide11,slide12,slide13,slide14,slide15,slide16,
               slide17,slide18,slide19,slide21,slide22,slide23,slide24,
               slide25,slide26,slide27,slide28,slide29,slide30,slide31,slide32,
-              slide33,slide34,slide35,slide36,oh2,oh3,oh4,oh5,
+              slide33,slide34,slide35,slide36,oh2,oh4,oh5,oh3,
               fd_cover,fd1,fd2,fd3,fd4,fd5,fd6,fd7,fd8,fd9,fd10,fd11,fd12,
               mf_cover,mf1,mf2,mf3,mf4,mf5,mf6,mf7,mf8,mf9,mf10,mf11,mf12,mf13,mf14,mf15,mf16,
               slide37]
