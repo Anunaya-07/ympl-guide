@@ -35,7 +35,16 @@ for i in range(1, 13):
     with open(path, "rb") as _f:
         fd[i] = "data:image/png;base64," + base64.b64encode(_f.read()).decode()
 
-# ── 1d. Load MF screenshots (Screenshot 1–16) ─────────────────────────────────
+# ── 1d. Load Client Onboarding screenshots (ss1–ss8) ──────────────────────────
+CO_DIR = "/Users/anunaya.choudhary/Windsurf Projects/YMPL guide/Client Onboarding Screenshots"
+
+co = {}
+for i in range(1, 9):
+    path = os.path.join(CO_DIR, f"ss{i}.png")
+    with open(path, "rb") as _f:
+        co[i] = "data:image/png;base64," + base64.b64encode(_f.read()).decode()
+
+# ── 1e. Load MF screenshots (Screenshot 1–16) ─────────────────────────────────
 MF_DIR = "/Users/anunaya.choudhary/Windsurf Projects/YMPL guide/MF Screenshots"
 
 mf = {}
@@ -493,7 +502,7 @@ slide23 = screen_slide(
         "Table columns: Name, Email, Client Type, KYC Status, Navigate, Actions",
         "Click 'Add new client' (top-right) to begin onboarding the first investor",
     ],
-    full_img(imgs[16]),
+    full_img(co[1]),
     extra_badge=badge("Add new client — top-right CTA","#6ee7b7")
 )
 
@@ -509,7 +518,7 @@ slide24 = screen_slide(
         "System verifies PAN instantly — name and details auto-fetched on validation",
         "Click Proceed to continue once PAN is entered",
     ],
-    full_img(imgs[16])
+    full_img(co[2])
 )
 
 slide25 = screen_slide(
@@ -524,7 +533,7 @@ slide25 = screen_slide(
         "If PAN is invalid or unrecognised, an error is shown — re-enter the correct PAN",
         "Click Proceed to move to the customer details form",
     ],
-    full_img(imgs[16]),
+    full_img(co[3]),
     extra_badge=badge("Powered by HyperVerge","#6ee7b7")
 )
 
@@ -540,7 +549,7 @@ slide26 = screen_slide(
         "Bank details can be skipped — client can add them during their own onboarding",
         "Click Continue to proceed to investment preference selection",
     ],
-    full_img(imgs[16])
+    full_img(co[4])
 )
 
 slide27 = screen_slide(
@@ -555,7 +564,7 @@ slide27 = screen_slide(
         "The onboarding link generated will be scoped to the selected product(s)",
         "Click 'Generate customer link' to send the invitation",
     ],
-    full_img(imgs[16])
+    full_img(co[5])
 )
 
 slide28 = screen_slide(
@@ -570,7 +579,7 @@ slide28 = screen_slide(
         "Client must open the email and click 'Get Started' to complete their KYC",
         "Dashboard will show the client with a 'Pending' KYC status immediately",
     ],
-    full_img(imgs[16])
+    full_img(co[6])
 )
 
 slide29 = screen_slide(
@@ -585,7 +594,7 @@ slide29 = screen_slide(
         "Actions dropdown: 'Send Onboarding Link' to resend, 'View KYC' to check progress",
         "Distributor can track all pending clients and nudge them from here",
     ],
-    full_img(imgs[16]),
+    full_img(co[7]),
     extra_badge=badge("Resend link available from Actions menu","#6ee7b7")
 )
 
@@ -601,7 +610,7 @@ slide30 = screen_slide(
         "The process is quick, simple, and fully secure",
         "Once client completes KYC and it is approved, their status updates to Approved",
     ],
-    full_img(imgs[16])
+    full_img(co[8])
 )
 
 slide31 = screen_slide(
