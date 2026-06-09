@@ -803,97 +803,54 @@ fd1 = screen_slide(
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits",
     "FD Marketplace",
-    "Browse all Fixed Deposit offerings at a glance",
+    "Browse all offerings · personalised rates for Women and Senior Citizens",
     [
         "All FD issuers displayed as cards — interest rate, tenure, and minimum amount visible upfront",
         "Highest-rated issuers: small finance banks, AAA-rated NBFCs, and bank-rated deposits",
-        "Use top-right filters to switch persona: Women / Senior Citizen / Senior Citizen Women",
+        "Women (W): +15–25 bps · Senior Citizen (SC): +25–50 bps · Senior Citizen Women (SCW): highest tier",
+        "Use top-right filters to switch persona — cards refresh in real-time · 'Clear All' resets to regular rates",
         "Click any card to open the full FD detail and returns calculator",
     ],
-    full_img(fd[1]),
-    extra_badge=badge("Top-rated issuers only","#fde68a")
-)
-
-fd2 = screen_slide(
-    "s43",
-    "linear-gradient(160deg, #92400e, #d97706)",
-    "Module 05 · Fixed Deposits · Rate Filters",
-    "Personalised Interest Rates",
-    "Higher rates for Women, Senior Citizens, and Senior Citizen Women",
-    [
-        "Women (W): typically 15–25 bps higher than regular rates",
-        "Senior Citizen (SC): typically 25–50 bps higher across all tenures",
-        "Senior Citizen Women (SCW): highest tier — combines both benefits",
-        "Cards refresh in real-time as filter changes — 'Clear All' resets to regular rates",
-    ],
-    full_img(fd[2])
+    full_img(fd[2]),
+    extra_badge=badge("Top-rated issuers only · Personalised rates available","#fde68a")
 )
 
 fd3 = screen_slide(
-    "s44",
+    "s43",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Issuer Detail",
-    "Issuer Profile & Returns Calculator",
-    "Full issuer overview, ratings, and live return projections",
+    "Issuer Profile & Payout Options",
+    "Ratings, fees, and returns calculator — choose payout frequency",
     [
-        "About Issuer: background, listing status, AUM, customer base",
-        "Key Info: CRISIL rating, minimum deposit, minimum lock-in period",
+        "About Issuer: background, listing status, AUM, customer base · CRISIL rating and minimum deposit",
         "Distribution Fee structure: Base, Incentive 1, Incentive 2 brackets (RM-only data)",
-        "Returns Calculator on the right — configure amount, tenure, payout frequency",
-    ],
-    full_img(fd[3]),
-    extra_badge=badge("CRISIL A1+ rated","#fde68a")
-)
-
-fd4 = screen_slide(
-    "s45",
-    "linear-gradient(160deg, #92400e, #d97706)",
-    "Module 05 · Fixed Deposits · Payout Options",
-    "Choose Payout Frequency",
-    "5 payout modes — income or compounding",
-    [
-        "Maturity: all interest paid at end — highest compounded value, ideal for wealth accumulation",
-        "Monthly: regular income stream — recommended for retired clients",
-        "Quarterly / Half-Yearly / Yearly: periodic payouts for planned expenses",
-        "Payout frequency selection updates the rate and estimated returns in real-time",
+        "Returns Calculator: configure amount, tenure, and payout frequency — returns update in real-time",
+        "5 payout modes: Maturity (compounding), Monthly (income), Quarterly / Half-Yearly / Yearly",
+        "Pro tip: Monthly for regular income · Maturity for maximum compounded growth",
     ],
     full_img(fd[4]),
-    extra_badge=badge("Pro tip: Monthly for income · Maturity for compounding","#fde68a")
+    extra_badge=badge("CRISIL A1+ rated · Pro tip: Monthly for income · Maturity for compounding","#fde68a")
 )
 
 fd5 = screen_slide(
-    "s46",
+    "s44",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Tenure Selection",
-    "Select Tenure & Rate",
-    "Full tenure grid with rates — Tax Saver flag where applicable",
+    "Select Tenure & FD Summary",
+    "Choose tenure and rate · review live yield before booking",
     [
-        "All available tenures shown with corresponding interest rates",
-        "5-year option tagged 'Tax Saver' — qualifies for Section 80C deduction up to ₹1.5 lakh",
-        "Longer tenures generally offer higher rates — compare before selecting",
-        "Select via radio button, then click 'Continue to Book FD' to proceed",
+        "All available tenures shown with rates — 5-year option tagged 'Tax Saver' (Section 80C, up to ₹1.5 lakh)",
+        "Longer tenures generally offer higher rates — compare before selecting via radio button",
+        "Selected FD displayed: issuer, tenure, and locked-in rate (e.g. 5-year Tax Saver at 8.05%)",
+        "Right panel shows: Annual Yield % and Estimated Returns — updates live as selection changes",
+        "Click 'Continue to Book FD' to confirm the selection and proceed to booking",
     ],
-    full_img(fd[5]),
-    extra_badge=badge("Tax Saver — Section 80C eligible","#fde68a")
-)
-
-fd6 = screen_slide(
-    "s47",
-    "linear-gradient(160deg, #92400e, #d97706)",
-    "Module 05 · Fixed Deposits · Selection Confirmed",
-    "FD Selection Summary",
-    "Chosen tenure locked in — live yield and return estimate",
-    [
-        "Selected FD displayed: issuer, tenure, rate (e.g. 5-year Tax Saver at 8.05%)",
-        "Right panel shows: Annual Yield % and Estimated Returns on the entered amount",
-        "Annual Yield and Est. Returns update live as selection changes",
-        "Click 'Continue to Book FD' to confirm and proceed to final booking",
-    ],
-    full_img(fd[6])
+    full_img(fd[6]),
+    extra_badge=badge("Tax Saver — Section 80C eligible · Live yield estimate","#fde68a")
 )
 
 fd7 = screen_slide(
-    "s48",
+    "s45",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Investment Summary",
     "Investment Details Confirmed",
@@ -908,7 +865,7 @@ fd7 = screen_slide(
 )
 
 fd8 = screen_slide(
-    "s49",
+    "s46",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Rate Card",
     "Full Rate Card",
@@ -923,7 +880,7 @@ fd8 = screen_slide(
 )
 
 fd9 = screen_slide(
-    "s50",
+    "s47",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Booking",
     "Book FD — Confirm Details",
@@ -938,7 +895,7 @@ fd9 = screen_slide(
 )
 
 fd10 = screen_slide(
-    "s51",
+    "s48",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Booking",
     "Confirm & Send Payment Link",
@@ -954,7 +911,7 @@ fd10 = screen_slide(
 )
 
 fd11 = screen_slide(
-    "s52",
+    "s49",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Booking",
     "Payment Link Sent",
@@ -969,7 +926,7 @@ fd11 = screen_slide(
 )
 
 fd12 = screen_slide(
-    "s53",
+    "s50",
     "linear-gradient(160deg, #92400e, #d97706)",
     "Module 05 · Fixed Deposits · Orders",
     "Orders — Track Applications",
@@ -987,7 +944,7 @@ fd12 = screen_slide(
 # ── Module 06: Mutual Funds (s53–s69) ────────────────────────────────────────
 
 mf_cover = cover_slide(
-    "s54",
+    "s51",
     "linear-gradient(135deg, #083344, #0c4a6e, #0284c7)",
     "Part 06 of 06",
     "Mutual Funds",
@@ -997,7 +954,7 @@ mf_cover = cover_slide(
 
 # ss16: Clients Dashboard with Mutual Fund navigate
 mf1 = screen_slide(
-    "s55",
+    "s52",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds",
     "Clients Dashboard",
@@ -1014,7 +971,7 @@ mf1 = screen_slide(
 
 # ss15: Investor Switcher dropdown
 mf2 = screen_slide(
-    "s56",
+    "s53",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds",
     "Investor Switcher",
@@ -1030,7 +987,7 @@ mf2 = screen_slide(
 
 # ss1: Explore Mutual Funds — Fund Catalogue
 mf3 = screen_slide(
-    "s57",
+    "s54",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Explore",
     "Fund Catalogue",
@@ -1047,7 +1004,7 @@ mf3 = screen_slide(
 
 # ss10: Fund Fact Sheet (360 ONE BALANCED HYBRID FUND)
 mf4 = screen_slide(
-    "s58",
+    "s55",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Fund Detail",
     "Fund Fact Sheet",
@@ -1064,7 +1021,7 @@ mf4 = screen_slide(
 
 # ss11: Set Up SIP — Step 1 Select Scheme
 mf5 = screen_slide(
-    "s59",
+    "s56",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · SIP Setup · Step 1 of 4",
     "Set Up SIP — Select Scheme",
@@ -1080,7 +1037,7 @@ mf5 = screen_slide(
 
 # ss12: Set Up SIP — Step 2 Configure SIP
 mf6 = screen_slide(
-    "s60",
+    "s57",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · SIP Setup · Step 2 of 4",
     "Configure Your SIP",
@@ -1097,7 +1054,7 @@ mf6 = screen_slide(
 
 # ss13: Place New Order — Step 3 Select Bank
 mf7 = screen_slide(
-    "s61",
+    "s58",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Lumpsum Order · Step 3 of 4",
     "Select Bank Account",
@@ -1113,7 +1070,7 @@ mf7 = screen_slide(
 
 # ss14: Place New Order — Step 4 Review & Confirm
 mf8 = screen_slide(
-    "s62",
+    "s59",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Lumpsum Order · Step 4 of 4",
     "Review &amp; Confirm Order",
@@ -1130,7 +1087,7 @@ mf8 = screen_slide(
 
 # ss3: Portfolio Dashboard
 mf9 = screen_slide(
-    "s63",
+    "s60",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Portfolio",
     "Portfolio Dashboard",
@@ -1147,7 +1104,7 @@ mf9 = screen_slide(
 
 # ss4: Portfolio Holdings
 mf10 = screen_slide(
-    "s64",
+    "s61",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Portfolio · Holdings",
     "Holdings — Per-Scheme Breakdown",
@@ -1164,7 +1121,7 @@ mf10 = screen_slide(
 
 # ss5: Mandates tab
 mf11 = screen_slide(
-    "s65",
+    "s62",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Portfolio · Mandates",
     "Mandates",
@@ -1181,7 +1138,7 @@ mf11 = screen_slide(
 
 # ss6: STP tab — list of 4 STPs
 mf12 = screen_slide(
-    "s66",
+    "s63",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Portfolio · STP",
     "Systematic Transfer Plans (STP)",
@@ -1198,7 +1155,7 @@ mf12 = screen_slide(
 
 # ss7: STP/SIP detail view
 mf13 = screen_slide(
-    "s67",
+    "s64",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · STP / SIP Detail",
     "Plan Detail View",
@@ -1214,7 +1171,7 @@ mf13 = screen_slide(
 
 # ss2: Orders — transaction history
 mf14 = screen_slide(
-    "s68",
+    "s65",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Orders",
     "Orders — Transaction History",
@@ -1231,7 +1188,7 @@ mf14 = screen_slide(
 
 # ss8: Calculators menu
 mf15 = screen_slide(
-    "s69",
+    "s66",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Calculators",
     "MF Calculators",
@@ -1248,7 +1205,7 @@ mf15 = screen_slide(
 
 # ss9: SIP Calculator result
 mf16 = screen_slide(
-    "s70",
+    "s67",
     "linear-gradient(160deg, #083344, #0284c7)",
     "Module 06 · Mutual Funds · Calculators · SIP",
     "SIP Calculator",
@@ -1288,7 +1245,7 @@ summary_right = f'''<div class="sum-col">
   {summary_bullet("Organisation Hierarchy → Build firm structure → Map partners")}
 </div>'''
 
-slide37 = f'''<div id="s71" class="slide cover" style="background:linear-gradient(135deg, #0f172a, #1e3a5f, #2563eb);">
+slide37 = f'''<div id="s68" class="slide cover" style="background:linear-gradient(135deg, #0f172a, #1e3a5f, #2563eb);">
   <div class="cover-inner">
     <div class="eyebrow">Complete Journey</div>
     <h1>From Sign-Up to Live</h1>
@@ -1306,7 +1263,7 @@ all_slides = [slide2,slide3,slide4,slide5,slide6,slide7,slide8,
               slide17,slide18,slide19,slide21,slide22,slide23,slide24,
               slide25,slide26,slide27,slide28,slide29,slide30,slide31,slide32,
               slide33,slide34,slide_tm,slide35,slide36,oh2,oh4,oh5,oh3,
-              fd_cover,fd1,fd2,fd3,fd4,fd5,fd6,fd7,fd8,fd9,fd10,fd11,fd12,
+              fd_cover,fd1,fd3,fd5,fd7,fd8,fd9,fd10,fd11,fd12,
               mf_cover,mf1,mf2,mf3,mf4,mf5,mf6,mf7,mf8,mf9,mf10,mf11,mf12,mf13,mf14,mf15,mf16,
               slide37]
 
@@ -1314,7 +1271,7 @@ slides_html = "\n".join(all_slides)
 
 dots_nav = "".join(
     f'<button class="dot" data-idx="{i}" aria-label="Go to slide {i+1}"></button>'
-    for i in range(70)
+    for i in range(67)
 )
 
 html = f'''<!DOCTYPE html>
@@ -1689,14 +1646,14 @@ body{{
     <button class="nav-btn" id="prev-btn" disabled>&#8592; Prev</button>
     <div id="dots">{dots_nav}</div>
     <button class="nav-btn" id="next-btn">Next &#8594;</button>
-    <span id="slide-counter">1 / 70</span>
+    <span id="slide-counter">1 / 67</span>
   </div>
 
 </div>
 
 <script>
 (function(){{
-  const total = 70;
+  const total = 67;
   let cur = 0;
 
   const slides  = Array.from({{length:total}},(_,i)=>document.getElementById('s'+(i+2)));
